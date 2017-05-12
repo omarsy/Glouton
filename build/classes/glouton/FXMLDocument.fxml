@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="javafxapplication4.FXMLDocumentController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <AnchorPane layoutX="10.0" layoutY="10.0" maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0">
+         <children>
+            <TabPane prefHeight="382.0" prefWidth="648.0" tabClosingPolicy="UNAVAILABLE">
+               <tabs>
+                  <Tab text="%key.unspecified">
+                     <content>
+                        <Pane prefHeight="374.0" prefWidth="640.0">
+                           <children>
+                              <TextField layoutX="136.0" layoutY="27.0" prefHeight="25.0" prefWidth="365.0" />
+                              <Label layoutX="47.0" layoutY="25.0" prefHeight="25.0" prefWidth="87.0" text="%key.unspecified" />
+                              <CheckBox layoutX="136.0" layoutY="62.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="99.0" text="%key.unspecified" />
+                              <CheckBox layoutX="294.0" layoutY="62.0" mnemonicParsing="false" text="%key.unspecified" />
+                              <Button layoutX="501.0" layoutY="27.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="133.0" text="%key.unspecified">
+                                 <cursor>
+                                    <Cursor fx:constant="OPEN_HAND" />
+                                 </cursor>
+                                 <effect>
+                                    <ColorAdjust />
+                                 </effect>
+                              </Button>
+                              <TableView layoutX="1.0" layoutY="147.0" prefHeight="200.0" prefWidth="633.0">
+                                 <columns>
+                                    <TableColumn prefWidth="196.0" text="C1" />
+                                    <TableColumn minWidth="3.0" prefWidth="436.0" text="C2" />
+                                 </columns>
+                              </TableView>
+                              <ProgressBar layoutX="2.0" layoutY="349.0" prefHeight="27.0" prefWidth="633.0" progress="0.0" />
+                              <Label layoutX="219.0" layoutY="121.0" prefHeight="25.0" prefWidth="66.0" text="%key.unspecified" textAlignment="CENTER" />
+                              <MenuButton mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0">
+                                 <graphic>
+                                    <ImageView fitHeight="24.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../../Downloads/drapeau-france-icone-7111-128.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <items>
+                                    <MenuItem mnemonicParsing="false">
+                                       <graphic>
+                                          <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../../../Downloads/saoudite-drapeau-arabie-icone-9305-128.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Unspecified Action">
+                                       <graphic>
+                                          <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../../../Downloads/angleterre-drapeau-icone-4482-128.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </MenuItem>
+                                 </items>
+                              </MenuButton>
+                           </children>
+                        </Pane>
+                     </content>
+                  </Tab>
+                  <Tab text="%key.unspecified">
+                     <content>
+                        <Pane prefHeight="369.0" prefWidth="648.0">
+                           <children>
+                              <TreeView layoutX="1.0" layoutY="68.0" prefHeight="285.0" prefWidth="308.0" />
+                              <DatePicker layoutX="486.0" layoutY="15.0" prefHeight="25.0" prefWidth="150.0" />
+                              <DatePicker layoutX="309.0" layoutY="15.0" prefHeight="25.0" prefWidth="150.0" />
+                              <TextField layoutX="121.0" layoutY="15.0" prefHeight="25.0" prefWidth="150.0" />
+                              <Button layoutX="537.0" layoutY="56.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="97.0" text="Filtrer" />
+                              <Label layoutX="121.0" layoutY="-2.0" prefHeight="17.0" prefWidth="50.0" text="%key.unspecified" />
+                              <Label layoutX="311.0" layoutY="-2.0" prefHeight="17.0" prefWidth="27.0" text="%key.unspecified" />
+                              <Label layoutX="486.0" layoutY="-2.0" text="Au" />
+                              <CheckBox layoutX="486.0" layoutY="40.0" mnemonicParsing="false" text="Filtrer Par Nom" />
+                              <CheckBox layoutX="309.0" layoutY="40.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="109.0" text="Filtrer par date" />
+                              <Button layoutX="356.0" layoutY="314.0" mnemonicParsing="false" prefHeight="8.0" prefWidth="66.0" text="Visualiser" />
+                              <Button layoutX="544.0" layoutY="314.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Supprimer" textFill="#d61313" />
+                              <Label layoutX="324.0" layoutY="109.0" prefHeight="17.0" prefWidth="144.0" text="Nom:" />
+                              <Label layoutX="320.0" layoutY="134.0" text="Arborescence" />
+                              <ListView layoutX="468.0" layoutY="134.0" prefHeight="70.0" prefWidth="177.0" />
+                              <Label layoutX="321.0" layoutY="202.0" prefHeight="25.0" prefWidth="150.0" text="Image et videos telecharges" />
+                              <ListView layoutX="468.0" layoutY="227.0" prefHeight="80.0" prefWidth="177.0" />
+                              <CheckBox layoutX="1.0" layoutY="15.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="109.0" text="%key.unspecified" />
+                           </children>
+                        </Pane>
+                     </content>
+                  </Tab>
+                  <Tab text="Visualiser">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Pane prefHeight="354.0" prefWidth="648.0">
+                                 <children>
+                                    <WebView layoutX="-1.0" layoutY="29.0" prefHeight="324.0" prefWidth="648.0" />
+                                    <Button layoutX="492.0" layoutY="2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="77.0" text="Visualiser" />
+                                    <TextField layoutX="128.0" layoutY="2.0" prefHeight="25.0" prefWidth="365.0" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

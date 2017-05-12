@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<VBox prefHeight="554.0" prefWidth="756.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="glouton.FXMLDocumentController">
+  <children>
+    <MenuBar opacity="0.48" visible="false" VBox.vgrow="NEVER">
+      <menus>
+            <Menu mnemonicParsing="false" />
+      </menus>
+    </MenuBar>
+      <ComboBox fx:id="choicelangue" prefHeight="25.0" prefWidth="18.0">
+<items>
+<FXCollections fx:factory="observableArrayList">
+<Label text="fr">
+<graphic> 
+<StackPane prefWidth="50">
+<ImageView fitHeight="24.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+  <image>
+    <Image url="@drapeau-france-icone-7111-128.png" />
+  </image>
+</ImageView>
+</StackPane>  
+</graphic>  
+</Label>  
+<Label text="en">
+<graphic> 
+<StackPane prefWidth="50">
+<ImageView fitHeight="24.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+  <image>
+    <Image url="@angleterre-drapeau-icone-4482-128.png" />
+  </image>
+</ImageView>
+</StackPane>  
+</graphic>  
+</Label>  
+<Label text="ar">
+<graphic> 
+<StackPane prefWidth="50">
+<ImageView fitHeight="24.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+  <image>
+    <Image url="@saoudite-drapeau-arabie-icone-9305-128.png" />
+  </image>
+</ImageView>
+</StackPane>  
+</graphic>  
+</Label>  
+</FXCollections>
+</items>
+</ComboBox>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="526.0" prefWidth="648.0" VBox.vgrow="ALWAYS">
+      <children>
+            <TabPane fx:id="tabPane" prefHeight="526.0" prefWidth="756.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab fx:id="tabAccueil" text="%key.tabAccueil">
+                     <content>
+                        <Pane prefHeight="353.0" prefWidth="674.0">
+                           <children>
+                              <TextField id="textTelecharger" fx:id="textTelecharger" layoutX="136.0" layoutY="27.0" prefHeight="25.0" prefWidth="365.0" />
+                              <Label layoutX="47.0" layoutY="25.0" prefHeight="25.0" prefWidth="87.0" />
+                              <CheckBox fx:id="checkRec" layoutX="242.0" layoutY="61.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="322.0" text="%key.checkRec" />
+                              <CheckBox fx:id="checkImageEtVideo" layoutX="242.0" layoutY="92.0" mnemonicParsing="false" text="%key.checkImageEtVideo" />
+                              <Button id="telecharger" fx:id="telechargerButton" layoutX="501.0" layoutY="27.0" mnemonicParsing="false" onAction="#clickTelecharger" prefHeight="25.0" prefWidth="133.0" text="%key.telechargerButton">
+                                 <cursor>
+                                    <Cursor fx:constant="OPEN_HAND" />
+                                 </cursor>
+                                 <effect>
+                                    <ColorAdjust />
+                                 </effect>
+                              </Button>
+                              <Label fx:id="vospages" layoutX="324.0" layoutY="173.0" prefHeight="25.0" prefWidth="109.0" text="%key.vospages" textAlignment="CENTER" />
+                              <Label fx:id="labeltelechargementerreur" layoutX="245.0" layoutY="6.0" prefHeight="20.0" prefWidth="74.0" text="Erreur URL" textAlignment="CENTER" textFill="#cd0909" visible="false">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="labeltelechargementreussi" layoutX="191.0" layoutY="-7.0" prefHeight="13.0" prefWidth="301.0" text="Telechargement reussis" textFill="#5bc638" visible="false">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="parcourir" layoutX="449.0" layoutY="126.0" mnemonicParsing="false" onAction="#clickParcourir" text="%key.parcourir" />
+                              <Label fx:id="labelPath" layoutX="92.0" layoutY="130.0" prefHeight="17.0" prefWidth="352.0" text="Label" />
+                              <ListView fx:id="listUrl" layoutY="217.0" prefHeight="281.0" prefWidth="756.0" />
+                           </children>
+                        </Pane>
+                     </content>
+                  </Tab>
+                <Tab fx:id="tabFichiers" text="%key.tabFichiers">
+                     <content>
+                        <Pane prefHeight="390.0" prefWidth="648.0">
+                           <children>
+                              <TreeView fx:id="treeview" layoutX="1.0" layoutY="19.0" prefHeight="479.0" prefWidth="308.0" />
+                              <Button fx:id="buttonVisualiserRac" layoutX="317.0" layoutY="471.0" mnemonicParsing="false" onAction="#clickbuttonVisualiserRac" prefHeight="25.0" prefWidth="107.0" text="%key.buttonVisualiserRac" />
+                              <Button fx:id="buttonSupprimerRac" layoutX="636.0" layoutY="471.0" mnemonicParsing="false" onAction="#supprimerPage" prefHeight="25.0" prefWidth="114.0" text="%key.buttonSupprimerRac" textFill="#d61313" />
+                              <Label fx:id="labelNomSelect" layoutX="324.0" layoutY="109.0" prefHeight="17.0" prefWidth="426.0" text="%key.labelNomSelect" />
+                              <Label fx:id="labelArborescenceSelect" layoutX="320.0" layoutY="134.0" text="%key.labelArborescenceSelect" />
+                              <ListView fx:id="listArborescence" layoutX="483.0" layoutY="148.0" prefHeight="135.0" prefWidth="270.0" />
+                              <Label fx:id="labelImEtViSelect" layoutX="317.0" layoutY="277.0" prefHeight="25.0" prefWidth="150.0" text="%key.labelImEtViSelect" />
+                              <ListView fx:id="listImagesVideos" layoutX="486.0" layoutY="308.0" prefHeight="147.0" prefWidth="268.0" />
+                           </children>
+                        </Pane>
+                     </content>
+                  </Tab>
+                  <Tab id="visualiser" fx:id="tabVisualiser" text="%key.tabVisualiser">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Pane prefHeight="497.0" prefWidth="756.0">
+                                 <children>
+                                    <WebView fx:id="webview" layoutX="-1.0" layoutY="29.0" prefHeight="466.0" prefWidth="756.0" />
+                                    <Button fx:id="buttonVisualiserInTab" layoutX="492.0" layoutY="2.0" mnemonicParsing="false" onAction="#clickbuttonVisualiserInTab" prefHeight="25.0" prefWidth="115.0" text="%key.buttonVisualiserInTab" />
+                                    <TextField fx:id="textVisualiser" layoutX="128.0" layoutY="2.0" prefHeight="25.0" prefWidth="365.0" />
+                                    <ProgressBar fx:id="progressWebView" layoutX="1.0" layoutY="480.0" prefHeight="18.0" prefWidth="756.0" progress="0.0" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
